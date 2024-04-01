@@ -1,0 +1,6 @@
+conn = sqlite3.connect("face-detection.db")
+    db_cursor = conn.cursor()
+
+    db_cursor.execute("CREATE TABLE IF NOT EXISTS images(img_id INTEGER PRIMARY KEY, name TEXT, image BLOB)")
+    conn.commit()
+
